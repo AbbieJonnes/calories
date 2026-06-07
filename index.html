@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes website responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Calorie Counter</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center items-center">
+
+    <!-- Main container -->
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+
+        <!-- Heading -->
+        <h1 class="text-3xl font-bold text-center mb-6">
+            Calorie Counter
+        </h1>
+
+        <!-- Form -->
+        <form id="foodForm" class="space-y-4">
+
+            <!-- Food Name -->
+            <input
+                type="text"
+                id="foodName"
+                placeholder="Enter Food Name"
+                class="w-full border p-2 rounded"
+                required
+            >
+
+            <!-- Calories -->
+            <input
+                type="number"
+                id="foodCalories"
+                placeholder="Enter Calories"
+                class="w-full border p-2 rounded"
+                required
+            >
+
+            <!-- Add Button -->
+            <button
+                type="submit"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+            >
+                Add Food
+            </button>
+
+        </form>
+
+        <!-- Total Calories Section -->
+        <div class="mt-6 text-center">
+
+            <h2 class="text-xl font-semibold">
+                Total Calories:
+                <span id="totalCalories">0</span>
+            </h2>
+
+        </div>
+
+        <!-- Food List -->
+        <ul id="foodList" class="mt-6 space-y-2"></ul>
+
+        <!-- Reset Button -->
+        <button
+            id="resetBtn"
+            class="mt-6 w-full bg-red-500 text-white p-2 rounded hover:bg-red-600"
+        >
+            Reset Day
+        </button>
+
+    </div>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
