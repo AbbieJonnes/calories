@@ -1,11 +1,11 @@
-Calorie Counter
-Description
+## Calorie 
+# Description
 
 Calorie Counter is a simple web application that helps users track their daily calorie intake. Users can add food items with their calorie values, view all food orders, see the total number of foods added, calculate total calories consumed, delete individual food items, and reset all records for a new day.
 
 The application uses Local Storage to save food data so that it remains available even after refreshing the browser.
 
-Features
+## Features
 Add food items and calorie values
 View all food orders
 Display total number of food items
@@ -15,13 +15,13 @@ Reset all food records
 Save data using Local Storage
 Fetch API implementation
 Responsive design using Tailwind CSS
-Technologies Used
-HTML5
+
+## Technologies Used
+HTML
 Tailwind CSS
-JavaScript (ES6+)
-Local Storage
-Fetch API
-Installation
+JavaScript
+
+## Installation
 Clone the repository:
 git clone https://github.com/AbbieJonnes/calories.git
 Open the project folder.
@@ -34,13 +34,15 @@ Click View Orders to see all added foods.
 Review the total food count and calorie count.
 Delete individual items if needed.
 Click Reset All to clear all records.
-Project Structure
+
+## Project Structure
 calorie-counter/
 │
 ├── index.html
 ├── script.js
 └── README.md
-Author
+
+## Author
 
 Abigael Mwangi
 
@@ -48,6 +50,6 @@ GitHub: https://github.com/AbbieJonnes
 
 Email: abigaelmwangi534@gmail.com
 
-License
+## License
 
 This project is licensed under the MIT License.
