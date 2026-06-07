@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Makes website responsive on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page title -->
     <title>Calorie Counter</title>
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex justify-center items-center">
+<body class="bg-gray-100 min-h-screen flex justify-center items-center p-4">
 
-    <!-- Main container -->
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg">
 
-        <!-- Heading -->
+        <!-- Title -->
         <h1 class="text-3xl font-bold text-center mb-6">
             Calorie Counter
         </h1>
 
-        <!-- Form -->
+        <!-- Add Food Form -->
         <form id="foodForm" class="space-y-4">
 
-            <!-- Food Name -->
             <input
                 type="text"
                 id="foodName"
@@ -36,7 +29,6 @@
                 required
             >
 
-            <!-- Calories -->
             <input
                 type="number"
                 id="foodCalories"
@@ -45,7 +37,6 @@
                 required
             >
 
-            <!-- Add Button -->
             <button
                 type="submit"
                 class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
@@ -55,30 +46,54 @@
 
         </form>
 
-        <!-- Total Calories Section -->
-        <div class="mt-6 text-center">
+        <!-- View Orders Button -->
+        <button
+            id="viewOrdersBtn"
+            class="mt-4 w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
+        >
+            View Orders
+        </button>
 
-            <h2 class="text-xl font-semibold">
-                Total Calories:
-                <span id="totalCalories">0</span>
+        <!-- Orders Section -->
+        <div
+            id="ordersSection"
+            class="hidden mt-6 border-t pt-4"
+        >
+
+            <h2 class="text-2xl font-semibold text-center mb-4">
+                Food Orders
             </h2>
+
+            <!-- Statistics -->
+            <div class="bg-gray-100 p-4 rounded mb-4">
+
+                <p class="font-semibold">
+                    Total Foods:
+                    <span id="foodCount">0</span>
+                </p>
+
+                <p class="font-semibold">
+                    Total Calories:
+                    <span id="totalCalories">0</span>
+                </p>
+
+            </div>
+
+            <!-- Food List -->
+            <ul id="foodList" class="space-y-2"></ul>
+
+            <!-- Reset Button -->
+            <button
+                id="resetBtn"
+                class="mt-4 w-full bg-red-500 text-white p-2 rounded hover:bg-red-600"
+            >
+                Reset All
+            </button>
 
         </div>
 
-        <!-- Food List -->
-        <ul id="foodList" class="mt-6 space-y-2"></ul>
-
-        <!-- Reset Button -->
-        <button
-            id="resetBtn"
-            class="mt-6 w-full bg-red-500 text-white p-2 rounded hover:bg-red-600"
-        >
-            Reset Day
-        </button>
-
     </div>
 
-    <!-- Link JavaScript -->
     <script src="script.js"></script>
 
 </body>
